@@ -1,24 +1,22 @@
-//Input Example
-
 _INPUT = "2\n3 9\n17 24";
+x = _INPUT.split('\n');
 
-//Expected Output
-/*
-2
-0
-*/
+function calcularaices(inf,sup){
+	resultado = 0;
+	for (z = inf; z <= sup; z++){
+		y = Math.sqrt(z);
+		if (Math.floor(y) == y){
+			resultado++;
+		}
+	}
+	return resultado;
+}
 
-//Second Input Example (Remember to comment the first example in order
-//and uncomment the next line in order test this case)
+lim = parseInt(x[0]);
+for (cont = 1; cont <= lim; cont++){
+	caso = x[cont].split(' ');
+	inf = parseInt(caso[0]);
+	sup = parseInt(caso[1]);
+	console.log(calcularaices(inf,sup));
+	}
 
-//_INPUT = "4\n1 8\n2 4\n10 13\n11 20";
-
-//Expected Output
-/*
-2
-1
-0
-1
-*/
-
-//----- Start your code here -------
